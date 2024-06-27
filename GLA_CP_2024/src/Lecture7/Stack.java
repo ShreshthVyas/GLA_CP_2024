@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Stack {
 
-	private int arr[];
+	protected int arr[];
 	private int top = -1;
 
 	public Stack() {
@@ -68,7 +68,5 @@ public class Stack {
 		int size = this.arr.length;
 		this.arr = new int[size];
 	}
-	
-	
 
 }
