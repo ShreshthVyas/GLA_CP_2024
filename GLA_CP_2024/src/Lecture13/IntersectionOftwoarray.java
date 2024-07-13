@@ -1,5 +1,7 @@
 package Lecture13;
 
+import java.util.HashSet;
+
 public class IntersectionOftwoarray {
 
 	public static void main(String[] args) {
@@ -7,7 +9,26 @@ public class IntersectionOftwoarray {
 
 	}
 
-public int[] intersection(int[] nums1, int[] nums2) {
-        
-    }
+	public int[] intersection(int[] nums1, int[] nums2) {
+		HashSet<Integer> temp = new HashSet<>();
+		HashSet<Integer> ans = new HashSet<>();
+		
+		for (int i = 0; i < nums1.length; i++) {
+			temp.add(nums1[i]);
+		}
+		
+		for (int i = 0; i < nums2.length; i++) {
+			if(temp.contains(nums2[i])) {
+				ans.add(nums2[i]);
+			}
+		}
+		int arr[] = new int[ans.size()];
+		int idx=0;
+		for (int i : ans) {
+			arr[idx] = i;
+			idx++;
+		}
+		
+		return arr;
+	}
 }
